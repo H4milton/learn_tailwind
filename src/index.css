@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/**Clases personalizado */
+
+.box {
+  @apply bg-blue-500 text-white rounded-lg size-15 flex items-center justify-center;
+}
+
+.box-grid {
+  @apply bg-blue-500 text-white rounded-lg p-2 flex items-center justify-center;
+}
+
+@theme {
+  /* --breakpoint-*: initial; reinicia por default*/
+  --breakpoint-sm: 27.5rem;
+}
