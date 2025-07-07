@@ -23,7 +23,6 @@ export default function Responsive1() {
           <div className="box-grid flex-1">3</div>
         </div>
       </div>
-
     </>
   );
 }
