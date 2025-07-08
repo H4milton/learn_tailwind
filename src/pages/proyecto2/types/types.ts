@@ -7,4 +7,5 @@ export interface RatingButtonProps {
   value: number;
   onClick: () => void;
   isSelected: boolean;
+  isHighlighted: boolean;
 }

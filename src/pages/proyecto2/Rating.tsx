@@ -4,6 +4,7 @@ import { useRating } from "./../proyecto2/hooks/useRating"; // 1. Importamos nue
 import RatingButton from "./RatingButton";
 import ThankYou from "./ThankYou";
 
+
 export default function Rating() {
   // 2. Usamos el hook para obtener toda la lógica y el estado
   const {
@@ -37,14 +38,22 @@ export default function Rating() {
           is appreciated to help us improve our offering! 1
         </p>
         <div className="flex place-content-between gap-x-4 my-5">
-          {valueRatings.map((rating) => (
-            <RatingButton
-              key={rating}
-              value={rating}
-              onClick={() => handleRatingSelected(rating)}
-              isSelected={ratingSelected === rating}
-            />
-          ))}
+          {valueRatings.map((ratingValue) => {
+            // Lógica para determinar el estado de cada botón
+            const isSelected = ratingSelected === ratingValue;
+            const isHighlighted =
+              ratingSelected !== null && ratingValue <= ratingSelected;
+
+            return (
+              <RatingButton
+                key={ratingValue}
+                value={ratingValue}
+                onClick={() => handleRatingSelected(ratingValue)}
+                isSelected={isSelected}
+                isHighlighted={isHighlighted} // 👈 Pasamos un nuevo prop
+              />
+            );
+          })}
         </div>
         <button
           onClick={handleSubmit}
