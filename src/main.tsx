@@ -12,10 +12,11 @@ import Rating from "./pages/proyecto2/Rating.tsx";
 import ThankYou from "./pages/proyecto2/ThankYou.tsx";
 import GridFlex from "./pages/ejercicios/GridFlex.tsx";
 import { Toaster } from "sonner";
+import TestimonialsGrid from "./pages/proyecto3/TestimonialsGrid.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <main className="font-Outfit font-normal text-2xl p-6 bg-Blue-950-main-BG text-white min-h-screen grid grid-cols-1 gap-y-8 place-content-center place-items-center">
+    <main className="font-Outfit font-normal text-2xl p-6 bg-Blue-900-card-BG text-white min-h-screen grid grid-cols-1 gap-y-8 place-content-center place-items-center">
       <Toaster richColors />
       {/* <Ejercicio1 /> */}
       {/* <Medidas /> */}
@@ -24,7 +25,8 @@ createRoot(document.getElementById("root")!).render(
       {/* <Seudos /> */}
       {/* <Apply /> */}
       {/* <PreviewCard/> */}
-      <Rating />
+      {/* <Rating /> */}
+      <TestimonialsGrid />
     </main>
   </StrictMode>
 );

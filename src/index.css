@@ -15,10 +15,14 @@
   @apply rounded-md bg-blue-500 px-4 py-2 text-white font-semibold hover:bg-blue-900 cursor-pointer focus:outline-blue-50 focus:outline-8 active:bg-green-600;
 }
 
-@layer components{
-      /* Esto es CSS estándar y es la forma correcta para valores personalizados. */
-  .gradient-background{
-    background: radial-gradient(circle at top left, hsl(215, 52%, 8%), hsl(216, 50%, 16%));
+@layer components {
+  /* Esto es CSS estándar y es la forma correcta para valores personalizados. */
+  .gradient-background {
+    background: radial-gradient(
+      circle at top left,
+      hsl(215, 52%, 8%),
+      hsl(216, 50%, 16%)
+    );
   }
 }
 
@@ -34,13 +38,25 @@
   --color-Blue-800-line: hsl(215, 32%, 27%);
   --color-White: hsl(0, 0%, 100%);
   --font-Outfit: Outfit;
-  
+
   --color-Orange-500: hsl(25, 97%, 53%);
 
   --color-White: hsl(0, 100%, 100%);
   --color-Grey-500: hsl(217, 12%, 63%);
   --color-Grey-900: hsl(213, 19%, 18%);
   --color-Grey-950: hsl(216, 12%, 8%);
+
+  /* //Colores para proyecto2 */
+  --purple-50: hsl(260, 100%, 95%);
+  --purple-100: hsl(260, 100%, 90%);
+  --purple-200: hsl(260, 100%, 80%);
+  --white: hsl(0, 0%, 100%);
+  --grey-100: hsl(214, 17%, 92%);
+  --grey-200: hsl(0, 0%, 81%);
+  --grey-400: hsl(224, 10%, 45%);
+  --grey-500: hsl(217, 19%, 35%);
+  --dark-blue: hsl(219, 29%, 14%);
+  --black: hsl(0, 0%, 7%);
 }
 
 @font-face {
@@ -50,5 +66,3 @@
   display: swap;
   src: url("assets/fonts/Outfit/Outfit-VariableFont_wght.ttf");
 }
-
-

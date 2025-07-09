@@ -1,6 +1,26 @@
 export default function GridFlex() {
   return (
     <>
+      <div className="m-4 p-4 bg-slate-200 rounded-lg grid grid-cols-2 gap-4">
+        <div className="bg-red-400 p-4 rounded-lg text-white">
+          <h2 className="font-bold">Soy un ítem del Grid</h2>
+          <p>Mi contenido fluye normalmente.</p>
+        </div>
+
+        <div className="bg-blue-500 p-4 rounded-lg flex flex-col justify-between col-span-3 row-span-1 col-start-1 row-start-1">
+          <h2 className="font-bold text-white">
+            Soy un ítem del Grid Y un contenedor Flex
+          </h2>
+
+          <div className="flex justify-between items-center mt-4">
+            <p className="text-white">Dato A</p>
+            <button className="bg-white text-blue-500 font-semibold py-1 px-3 rounded-full">
+              Botón
+            </button>
+          </div>
+        </div>
+      </div>
+
       <h1 className="font-bold">Normal</h1>
       <div className="">
         <div className="box">01</div>
