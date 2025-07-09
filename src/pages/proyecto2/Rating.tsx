@@ -58,10 +58,9 @@ export default function Rating() {
               alt="icon-star"
             />
           </div>
-          <h1 className="font-bold mb-4">How did we do?</h1>
+          <h1 className="font-bold mb-4">Califique nuestro servicio??</h1>
           <p className="font-light text-sm text-gray-400 mb-4">
-            Please let us know how we did with your support request. All
-            feedback is appreciated to help us improve our offering!
+            Por favor, háganos saber cómo le fue con su solicitud de soporte. Agradecemos su tiempo para calificarnos y ayudarnos a mejorar nuestra oferta.
           </p>
           <div className="flex place-content-between gap-x-4 my-5">
             {valueRatings.map((ratingValue) => {

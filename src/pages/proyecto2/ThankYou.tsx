@@ -11,7 +11,6 @@ export default function ThankYou({ rating, onReset }: ThankYouProps) {
   };
 
   return (
-    // Convierte el div raíz en un motion.div y añade las mismas animaciones
     <motion.div
       className="rounded-2xl gradient-background p-8 w-[347px] grid place-items-center text-center gap-y-2"
       variants={cardVariants}
@@ -26,15 +25,18 @@ export default function ThankYou({ rating, onReset }: ThankYouProps) {
         alt="Thank You Illustration"
       />
       <p className="font-light text-sm bg-gray-700 py-1 px-4 rounded-full text-Orange-500">
-        You selected {rating} of 5
+        Seleccionaste {rating} de 5
       </p>
-      <h2 className="font-bold text-2xl pt-4">Thank you!</h2>
+      <h2 className="font-bold text-2xl pt-4">Muchas gracias!</h2>
       <p className="font-light text-sm text-gray-400">
-        We appreciate you taking the time to give a rating. If you ever need
-        more support, don’t hesitate to get in touch!
+        Agradecemos que te hayas tomado el tiempo de calificarnos. Si necesitas
+        más ayuda, no dudes en contactarnos.
       </p>
-      <button onClick={onReset} className="mt-4 text-gray-400 hover:text-white">
-        Rate again
+      <button
+        onClick={onReset}
+        className="mt-4 text-gray-400 hover:text-Orange-500 text-lg"
+      >
+        Calificar nuevamente
       </button>
     </motion.div>
   );
