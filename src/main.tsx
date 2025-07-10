@@ -16,7 +16,7 @@ import TestimonialsGrid from "./pages/proyecto3/TestimonialsGrid.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <main className="font-Outfit font-normal text-2xl p-6 bg-Blue-900-card-BG text-white min-h-screen grid grid-cols-1 gap-y-8 place-content-center place-items-center">
+    <main className="font-Outfit font-normal text-2xl p-6 text-white min-h-screen flex items-center justify-center">
       <Toaster richColors />
       {/* <Ejercicio1 /> */}
       {/* <Medidas /> */}

@@ -31,11 +31,13 @@ export default function CardTestimonial({ testimonial }: CardTestimonialProps) {
 
   return (
     <motion.article
-      className={`rounded-lg shadow-xl p-8 flex flex-col gap-4 ${testimonial.cardClasses} ${testimonial.gridSpan} cursor-pointer`} // MÉTODO 2: Inyección directa de clases desde los datos.
+      className={`rounded-2xl shadow-xl p-8 flex flex-col gap-4 ${testimonial.cardClasses} ${testimonial.gridSpan} cursor-pointer shadow-sm shadow-Blue-950-main-BG`} // MÉTODO 2: Inyección directa de clases desde los datos.
       variants={itemVariants}
       whileHover={{ scale: 1.03, y: -8 }}
       whileTap={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      initial="hidden"
+      animate="visible"
     >
       <header className="flex gap-4 items-center">
         {testimonial.image && (

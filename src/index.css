@@ -15,6 +15,12 @@
   @apply rounded-md bg-blue-500 px-4 py-2 text-white font-semibold hover:bg-blue-900 cursor-pointer focus:outline-blue-50 focus:outline-8 active:bg-green-600;
 }
 
+.background-image{
+  background-image: url("/public/img/proyecto3/images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: right 24px top 20px;
+}
+
 @layer components {
   /* Esto es CSS estándar y es la forma correcta para valores personalizados. */
   .gradient-background {
