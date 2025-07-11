@@ -13,13 +13,15 @@ import GridFlex from "./pages/ejercicios/GridFlex.tsx";
 import Medidas from "./pages/ejercicios/Medidas.tsx";
 import Seudos from "./pages/ejercicios/Seudos.tsx";
 import Responsive1 from "./pages/ejercicios/Responsive1.tsx";
+import Apply from "./pages/ejercicios/Apply.tsx";
+import Ejercicio1 from "./pages/ejercicios/Ejercicio1.tsx";
 
 // Proyectos
 import PreviewCard from "./pages/proyecto1/PreviewCard.tsx";
 import Rating from "./pages/proyecto2/Rating.tsx";
 import TestimonialsGrid from "./pages/proyecto3/TestimonialsGrid.tsx";
-import Apply from "./pages/ejercicios/Apply.tsx";
-import Ejercicio1 from "./pages/ejercicios/Ejercicio1.tsx";
+import SocialSection from "./pages/proyecto4/SocialSection.js";
+
 
 //Definimos las rutas
 const router = createBrowserRouter([
@@ -38,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "proyecto3",
         element: <TestimonialsGrid />,
+      },
+      {
+        path: "proyecto4",
+        element: <SocialSection />,
       },
       {
         path: "ejercicios",

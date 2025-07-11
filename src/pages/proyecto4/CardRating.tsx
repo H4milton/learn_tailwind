@@ -1,0 +1,33 @@
+interface Rating {
+  rating: number;
+  rated_by: string;
+}
+
+interface RatingProps {
+  rating: Rating;
+}
+
+export default function CardRating({ rating: rating }: RatingProps) {
+  return (
+    <div className="flex flex-col gap-4 mt-4 items-center bg-light-grayish-magenta py-2 rounded-lg">
+      <div className="flex gap-2 items-center mb-0">
+        {/* 
+          1. Creamos un array vacío con una longitud igual a `rating.rating`.
+          2. Usamos .map() para iterar sobre ese array.
+          3. Por cada elemento, renderizamos un componente <img>.
+        */}
+        {Array.from({ length: rating.rating }).map((_, index) => (
+          <img
+            key={index}
+            src="/public/img/proyecto4/images/icon-star.svg"
+            className="size-[10px]"
+            alt="Star"
+          />
+        ))}
+      </div>
+      <p className="text-sm font-bold text-very-dark-magenta">
+        {rating.rated_by}
+      </p>
+    </div>
+  );
+}

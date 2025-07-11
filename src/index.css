@@ -15,7 +15,7 @@
   @apply rounded-md bg-blue-500 px-4 py-2 text-white font-semibold hover:bg-blue-900 cursor-pointer focus:outline-blue-50 focus:outline-8 active:bg-green-600;
 }
 
-.background-image{
+.background-image {
   background-image: url("/public/img/proyecto3/images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position: right 24px top 20px;
@@ -53,16 +53,25 @@
   --color-Grey-950: hsl(216, 12%, 8%);
 
   /* //Colores para proyecto2 */
-  --purple-50: hsl(260, 100%, 95%);
-  --purple-100: hsl(260, 100%, 90%);
-  --purple-200: hsl(260, 100%, 80%);
-  --white: hsl(0, 0%, 100%);
-  --grey-100: hsl(214, 17%, 92%);
-  --grey-200: hsl(0, 0%, 81%);
-  --grey-400: hsl(224, 10%, 45%);
-  --grey-500: hsl(217, 19%, 35%);
-  --dark-blue: hsl(219, 29%, 14%);
-  --black: hsl(0, 0%, 7%);
+  --color-purple-50: hsl(260, 100%, 95%);
+  --color-purple-100: hsl(260, 100%, 90%);
+  --color-purple-200: hsl(260, 100%, 80%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-100: hsl(214, 17%, 92%);
+  --color-grey-200: hsl(0, 0%, 81%);
+  --color-grey-400: hsl(224, 10%, 45%);
+  --color-grey-500: hsl(217, 19%, 35%);
+  --color-dark-blue: hsl(219, 29%, 14%);
+  --color-black: hsl(0, 0%, 7%);
+
+  /* ### PROYECTO 4 */
+  /* ### Primary */
+  --color-very-dark-magenta: hsl(300, 43%, 22%);
+  --color-soft-pink: hsl(333, 80%, 67%);
+
+  /* ### Neutral */
+  --color-dark-grayish-magenta: hsl(303, 10%, 53%);
+  --color-light-grayish-magenta: hsl(300, 24%, 96%);
 }
 
 @font-face {
