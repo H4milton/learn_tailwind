@@ -5,19 +5,35 @@ import irene_img from "../../assets/img/proyecto4/image-irene.jpg";
 import anne_img from "../../assets/img/proyecto4/image-anne.jpg";
 import CardRating from "./CardRating";
 import CardTestimonial from "./CardTestimonial";
+import Background from "./Background";
+import { motion } from "framer-motion";
+
+// Controlará la animación de sus hijos.
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1, // Pequeño retraso entre la animación de cada tarjeta
+    },
+  },
+};
 
 const ratings = [
   {
     rating: 5,
     rated_by: "Rated 5 Stars in Reviews",
+    classProps: "lg:self-start",
   },
   {
     rating: 3,
     rated_by: "Rated 5 Stars in Report Guru",
+    classProps: "lg:self-center",
   },
   {
     rating: 2,
     rated_by: "Rated 5 Stars in BestTech",
+    classProps: "lg:self-end",
   },
 ];
 
@@ -51,19 +67,26 @@ const ratings_testimonial = [
 export default function SocialSection() {
   return (
     <>
-      <div className="mt-20 lg:mx-50">
-        <div className="flex flex-col gap-4 lg:flex-row lg:gap-6">
-          <div className="flex flex-col gap-4 lg:w-1/2 justify-center">
-            <h1 className="font-bold mb-4 text-center">
-              10,000+ of our users love our products.
+      {/* Relative hace que los elementos con propiedad absolute tomen como referencia el elemento con la propiedad relative */}
+      <motion.div
+        className="mt-20 lg:mx-30 z-0"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <Background />
+        <div className="flex flex-col gap-4 xl:flex-row lg:gap-6 mb-5">
+          <div className="flex flex-col gap-4 justify-center lg:flex-1">
+            <h1 className="font-bold mb-4 text-center lg:text-left lg:text-3xl lg:w-3xs">
+              10,000+ of our users love our products..
             </h1>
-            <p className="text-sm mb-4 text-center">
+            <p className="text-sm mb-4 text-center lg:text-left lg:text-1xs lg:w-[500px]">
               We only provide great products combined with excellent customer
               service. See what our satisfied customers are saying about our
               services.
             </p>
           </div>
-          <div className="mb-6 flex flex-col gap-4 lg:w-2/3">
+          <div className="flex flex-col gap-4 lg:w-[400px] justify-center">
             {ratings.map((rating) => (
               <CardRating key={rating.rated_by} rating={rating} />
             ))}
@@ -77,7 +100,7 @@ export default function SocialSection() {
             <CardTestimonial key={testimonial.name} testimonial={testimonial} />
           ))}
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
