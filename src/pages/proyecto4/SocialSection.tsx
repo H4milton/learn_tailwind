@@ -8,6 +8,8 @@ import CardTestimonial from "./CardTestimonial";
 import Background from "./Background";
 import { motion } from "framer-motion";
 
+import type { Rating } from "./types";
+
 // Controlará la animación de sus hijos.
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -19,7 +21,7 @@ const containerVariants = {
   },
 };
 
-const ratings = [
+const ratings: Rating[] = [
   {
     rating: 5,
     rated_by: "Rated 5 Stars in Reviews",

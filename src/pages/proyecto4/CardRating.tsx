@@ -1,14 +1,4 @@
 import { motion, type Variants } from "framer-motion";
-interface Rating {
-  rating: number;
-  rated_by: string;
-  classProps: string;
-}
-
-interface RatingProps {
-  rating: Rating;
-}
-
 // Variantes para cada tarjeta individual.
 const itemVariants: Variants = {
   hidden: { y: 20, opacity: 0 },
@@ -23,7 +13,12 @@ const itemVariants: Variants = {
   },
 };
 
-export default function CardRating({ rating: rating }: RatingProps) {
+import type { Rating } from "./types";
+interface RatingProps {
+  rating: Rating;
+}
+
+export default function CardRating({ rating }: RatingProps) {
   return (
     <motion.div
       className={`flex flex-col gap-4 mt-4 items-center bg-light-grayish-magenta py-2 rounded-lg xl:w-[350px] lg:flex-row lg:justify-center ${rating.classProps}`}
