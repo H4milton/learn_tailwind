@@ -21,7 +21,7 @@ import PreviewCard from "./pages/proyecto1/PreviewCard.tsx";
 import Rating from "./pages/proyecto2/Rating.tsx";
 import TestimonialsGrid from "./pages/proyecto3/TestimonialsGrid.tsx";
 import SocialSection from "./pages/proyecto4/SocialSection.js";
-
+import SimpleOmelete from "./pages/proyecto5/SimpleOmelete.tsx";
 
 //Definimos las rutas
 const router = createBrowserRouter([
@@ -44,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "proyecto4",
         element: <SocialSection />,
+      },
+      {
+        path: "proyecto5",
+        element: <SimpleOmelete />,
       },
       {
         path: "ejercicios",

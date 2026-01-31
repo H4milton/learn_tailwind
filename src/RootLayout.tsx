@@ -22,6 +22,9 @@ export default function RootLayout() {
           <Link to="/proyecto4" className="hover:underline text-violet-300">
             Proyecto 4
           </Link>
+           <Link to="/proyecto5" className="hover:underline text-violet-300">
+            Proyecto 5
+          </Link>
           <Link to="/ejercicios" className="hover:underline text-violet-300">
             Ejercicios
           </Link>
